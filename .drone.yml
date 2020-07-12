@@ -3,10 +3,17 @@ kind: pipeline
 type: exec
 name: default
 
+clone:
+  disable: true
+  
 steps:
 - name: greeting
   commands:
-  - echo hello world
+  - cd /home/dltest/dreamland_code
+  - git pull
+  - cd plug-ins
+  - make
+  
   
   
   
