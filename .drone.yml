@@ -9,6 +9,8 @@ clone:
 steps:
 - name: greeting
   commands:
+  - eval `ssh-agent -s`
+  - ssh-add /home/dltest/.ssh/drone    
   - cd /home/dltest/dreamland_code
   - git pull
   - cd plug-ins
